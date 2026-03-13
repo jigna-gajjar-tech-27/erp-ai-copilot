@@ -94,7 +94,27 @@ function Chat() {
       flexDirection: "column"
     }}>
         <h3 style={{ marginBottom: 20 }}>ERP AI</h3>
-
+      <a href="https://yourportfolio.com"
+  target="_blank"
+  rel="noopener noreferrer"
+  style={{
+    display: "block",
+    padding: "8px 12px",
+    borderRadius: 8,
+    background: "rgba(37, 99, 235, 0.08)",
+    color: "#2563eb",
+    textDecoration: "none",
+    fontSize: 13,
+    fontWeight: 500,
+    marginBottom: 12,
+    border: "1px solid rgba(37, 99, 235, 0.2)",
+    transition: "background 0.2s",
+  }}
+  onMouseEnter={e => e.currentTarget.style.background = "rgba(37, 99, 235, 0.15)"}
+  onMouseLeave={e => e.currentTarget.style.background = "rgba(37, 99, 235, 0.08)"}
+>
+  🔗 My Portfolio
+</a>
         <button onClick={createNewChat} style={{
           padding: 10,
           borderRadius: 8,
@@ -108,12 +128,12 @@ function Chat() {
         </button>
 
         <div style={{
-  flexGrow: 1,
-  fontSize: 14,
-  overflowY: "auto",
-  overflowX: "hidden",
-  marginTop: 10
-}}>
+            flexGrow: 1,
+            fontSize: 14,
+            overflowY: "auto",
+            overflowX: "hidden",
+            marginTop: 10
+          }}>
         {sessions.map(s => (
           <div
             key={s.id}
